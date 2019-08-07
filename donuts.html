@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duncan's Just-In-Time Donuts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="donuts.css">
+    <script src="donuts.js"></script>
+</head>
+<body onload="greeting()">
+<div class="container">
+    <br>
+    <h1>Duncan's Just-In-Time Donuts</h1>
+    <h5>All donuts 50 cents each, cake or glazed!</h5>
+    <br>
+    <fieldset class="border border-dark p-4">
+        <div id="row">
+            <div class="column">
+                <img id="kep" src="donuts.jpg" height="275" width="275"/>
+            </div>
+            <div class="column">
+                <form action="donuts.php" method="post">
+                    <div class='row'>
+                        <label class="col-5 col-sm-5">Name: </label>
+                        <input class="col-4 col-sm-4, border border-info" type="text" name="name" id="name" required/>
+                        <div class='w-100'></div>
+                        <label class="col-5 col-sm-5">of cake donuts: </label>
+                        <input class="col-4 col-sm-4, border border-info" type="text" name="db1" id="db1"
+                               onchange="subtotal(this.value)"/>
+                        <div class='w-100'></div>
+                        <label class="col-5 col-sm-5">of glazed donuts: </label>
+                        <input class="col-4 col-sm-4, border border-info" type="text" name="db2" id="db2"
+                               onchange="subtotal(this.value)"/>
+                        <div class='w-100'></div>
+                        <label class="col-5 col-sm-5">Minutes 'til pick up: </label>
+                        <input class="col-4 col-sm-4, border border-info" type="text" name="minute" id="minute" required
+                               onchange="check(this.value)"/>
+                        <div class='w-100'></div>
+                        <label class="col-5 col-sm-5">Subtotal: </label>
+                        <input class="col-4 col-sm-4, border border-info" type="text" name="subtot" id="subtot"
+                               required/>
+                        <div class='w-100'></div>
+                        <label class="col-5 col-sm-5">Tax: </label>
+                        <input class="col-4 col-sm-4, border border-info" type="text" name="tax" id="tax" required/>
+                        <div class='w-100'></div>
+                        <label class="col-5 col-sm-5">Total: </label>
+                        <input class="col-4 col-sm-4, border border-info" type="text" name="total" id="total" required/>
+                    </div>
+                    </br>
+                    <div>
+                        <button class="btn btn-info" name="submit" onclick="dbcheck()">Place Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </fieldset>
+</div>
+</body>
+</html>

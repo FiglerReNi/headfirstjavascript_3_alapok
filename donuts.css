@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 15px;
+}
+
+#row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+
+}
+
+h1, h5 {
+    text-align: center;
+    color: mediumvioletred;
+}
+
+#kep {
+    border: mediumvioletred solid 2px;
+}
